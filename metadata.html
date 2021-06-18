@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		
+		<link href="metadata_s.css" rel="stylesheet" type="text/css">
+
+	</head>
+
+	<body>
+		<main>
+        <h1 class="main-title">Document's metadata</h1>
+		    <section>
+	            <h2 class="title">
+	                Link: <b>&lt;link&gt;</b>
+	            </h2>
+	            <p class="description">
+	                This element allows the incorporation of a local or remote structural or formatting** file to the main HTML document.
+	            </p>
+				<section  class="second-level" class="attributes">
+	                <h3 class="subtitle">
+	                    Attributes and values:
+	                </h3>
+	                <ul class="attribute-list">
+	                    <li>
+	                        <strong>&quot;href&quot;</strong>: provides identification for** the source of the imported data. It can be:
+	                        <ul class="sublist-1">
+	                        	<li>
+	                        		An absolute URL: <b><a href="#">"https://stylesheets.com/style.css</a></b>
+	                        	</li>
+	                        	<li>
+	                        		A relative URL: <b><a href="#">"/styles/style.css"</a></b>
+	                        	</li>
+	                        </ul>
+	                    </li>
+	                    <li>
+	                        <strong>&quot;rel&quot;</strong>: states the relationship** between the imported document and the main one:
+	                       	<ul class="sublist-1">
+	                        	<li>
+	                        		The author of the document: <b>"author"</b>
+	                        	</li>
+	                        	<li>
+	                        		The license under which the document is registered: <b>"license"</b>
+	                        	</li>
+	                        	<li>
+	                        		The site's icon: <b>"icon"</b>
+	                        	</li>
+	                        	<li>
+	                        		Previous page: <b>"prev"</b>
+	                        	</li>
+	                        	<li>
+	                        		Next page: <b>"next"</b>
+	                        	</li>
+	                        	<li>
+	                        		Sidebar of the site: <b>"sidebar"</b>
+	                        	</li>
+	                        	<li>
+	                        		Stylesheet used for formatting: <b>"stylesheet"</b>
+	                        	</li>
+	                        </ul>
+	                    </li>
+	                    <li>
+	                        <strong>&quot;type&quot;</strong>: defines the type of the imported document:
+	                        <ul class="sublist-1">
+	                        	<li>
+	                        		HTML document: <b>"text/html"</b>
+	                        	</li>
+	                        	<li>
+	                        		CSS document: <b>"text/css"</b>
+	                        	</li>
+	                        	<li>
+	                        		Image document: <b>"image/gif"</b>
+	                        	</li>
+	                        </ul>
+	                    </li>
+	                </ul>
+	            </section>
+	            <pre class="html-code">
+	                <code data-lang="html">
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+	&lt;head&gt;
+
+		<span class="code-focus">&lt;link href="/styles/style.css" rel="stylesheet" type="text/css"&gt;</span>
+
+		<span class="code-focus">&lt;link href="/documents/document.html" rel="next" type="text/html"&gt;</span>
+
+		<span class="code-focus">&lt;link href="/icons/icon.png" rel="icon" type="image/gif"&gt;</span>
+
+	&lt;/head&gt;
+
+&lt;/html&gt;
+	                </code>
+	            </pre>
+	        </section>
+
+
+
+		    <section>
+	            <h2 class="title">
+	                Script: <b>&lt;script&gt;</b>
+	            </h2>
+	            <p class="description">
+	                This element allows the incorporation of a local or remote behavioral file to the main HTML document.
+	            </p>
+				<section  class="second-level" class="attributes">
+	                <h3 class="subtitle">
+	                    Attributes and values:
+	                </h3>
+	                <ul class="attribute-list">
+	                    <li>
+	                        <strong>&quot;src&quot;</strong>: provides identification for** the source of the imported data. It can be:
+	                        <ul class="sublist-1">
+	                        	<li>
+	                        		An absolute URL: <b><a href="#">"https://behaviors.com/rules.js</a></b>
+	                        	</li>
+	                        	<li>
+	                        		A relative URL: <b><a href="#">"/behavior/rules.js"</a></b>
+	                        	</li>
+	                        </ul>
+	                    </li>
+	                    <li>
+	                        <strong>&quot;type&quot;</strong>: defines the type of the imported document:
+	                        <ul class="sublist-1">
+	                        	<li>
+	                        		JavaScript document: <b>"text/javascript"</b>
+	                        	</li>
+	                        </ul>
+	                    </li>
+	                    <li>
+	                        <strong>&quot;async&quot;</strong>: allows the imported file to be loaded asynchronously. [+]
+	                        <ul class="sublist-1">
+	                        	<li>
+	                        		This attribute does not require a value.
+	                        	</li>
+	                        </ul>
+	                    </li>
+	                </ul>
+	            </section>
+	            <pre class="html-code">
+	                <code data-lang="html">
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+	&lt;head&gt;
+
+		<span class="code-focus">&lt;script src="/behaviors/rules.css" type="javascript" async&gt;</span>
+
+	&lt;/head&gt;
+
+&lt;/html&gt;
+	                </code>
+	            </pre>
+	        </section>
+	        <p class="annotation">
+	        	Under development... [+]
+	        </p>
+	    </main>
+	</body>
+</html>
+
+<!--
+
+    Note: if there is no other document from which the &lt;title&gt; element is imported, one or more elements are required in this block. Otherwise, none or more are required.
+
+-->

@@ -1,0 +1,255 @@
+/* Annotations area (below) */
+
+/*
+
+Pre-release:
+
+    1.CHECK HTML MISSING LINKS (missing_link)
+
+    2.CHECK HTML EDITS (EDIT)
+
+    3.CHECK RESEARCH [+] AND INVESTIGATION [*]
+
+    4.CHECK USAGE NOTES FOR EACH ELEMENT
+
+*/
+
+/*
+
+Properties definition order:
+
+    1) Display settings
+    2) Position settings
+    3) Margins and paddings
+        31) Margins
+        32) Paddings
+    4) Borders and shadow boxes
+        41) Borders
+        42) Shadow boxes
+    5) Text settings
+        51) Fonts
+        52) Dimensions
+        53) Decorations
+        54) Text shadows
+        55) Other
+    6) Color settings
+        61) Text color
+        62) Background color
+    7) Animations and transitions
+        71) Transitions
+        72) Animations
+
+*/
+
+
+/* Formatting area (below) */
+
+/* General text and background color formatting */
+
+html {
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(180deg, rgba(86, 126, 226, .5) 0%, 50%, rgba(66, 106, 206, .8));
+}
+
+body{
+    background-color: transparent;
+}
+
+p {
+    background-color: rgba(156, 0, 256, .05);
+}
+
+p.annotation {
+    background-color: rgba(56, 0, 256, .3);
+}
+
+section {
+    background-color: rgba(156, 0, 256, .05); /* This transparency setting allows the procedural color change for element's overlay */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgba(256, 256, 256, .8);
+    background-color: rgba(6, 0, 196, .5);
+}
+
+/* General box-shadow and border formatting */
+
+section, h1, h2, h3, h4, p, ul{
+    box-shadow: 0px 3px 4px black;
+    border: 0px solid black;
+    border-radius: 10px;
+}
+
+/* Border glowing effect settings */
+
+    p,
+    ul,
+    ol,
+    dl,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        border: 3px solid rgba(150, 0, 256, .1);
+        border-top: 3px solid rgba(256, 256, 256, .2);
+        border-bottom-width: 0px;
+    } /* "section" tag was removed due to the existence of unpleasant visual results when combined with title's glowing border effect */
+
+    p {
+        border-width: 2px;
+        border-bottom-width: 0px;
+    } /* Adaptations made so that the paragraphs' effect would not look excessive */
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* Root and root sectioning elements general formatting */
+
+html {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    margin: 0em; /* If not set to zero, the body gets slightly separated from the boders of the document */
+}
+
+section {
+    
+    padding-bottom: .5em;
+    margin: 1.75em;
+}
+
+/* Content elements */
+
+    /* Titles */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0em;
+        padding: .5em;
+        font-weight: 700;
+        font-size: 1.75rem;
+    }
+
+        /* Various title settings adjustments */
+
+        .main-title { /* Main title specific format */
+            border-width: 0px;
+            margin: 0em;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 0px;
+        }
+
+        h2 {
+            font-size: 1.55rem;
+        }
+
+        h3 {
+            font-size: 1.35rem;
+        }
+
+        h4 {
+            font-size: 1.20rem;
+        }
+
+        h5 {
+            font-size: 1.15rem;
+        }
+
+        h6 {
+            font-size: 1.10rem;
+        }
+
+    /* Paragraphs */
+
+    p {
+        margin: 1.75em;
+        padding: 0.5em;
+    }
+
+        p.annotation {
+            margin: 1.75em;
+            font-style: italic;
+        }
+
+    /* Links */
+
+    a {
+        color: inherit;
+        font-size: inherit;
+        text-decoration: inherit;
+    }
+
+    /* Bold and strong */
+
+    b,
+    strong {
+        font-weight: 1.75em;
+    }
+
+    /* Lists */
+
+    ul,
+    ol,
+    dl {
+        margin: 1.75em;
+        padding: 1em 2.5em;
+        background-color: rgba(250, 250, 255, .6);
+    }
+
+        .sublist-1{
+            margin: 0em;
+            padding: 1em 2em;
+            box-shadow: 0px 0px 0px;
+            background-color: transparent;
+        }
+
+    /* Coding blocks formatting */
+
+    pre { /* Code container */
+        margin: 1.75em;
+        border: 5px rgb(170, 170, 170) solid;
+        border-top: 5px rgb(180, 180, 180) solid;
+        border-bottom: 5px rgb(160, 160, 160) solid;
+        border-radius: 10px;
+        padding-top: 0em;
+        box-shadow: 0px 10px 0px rgb(120, 120, 120);
+        background-color: rgb(50, 50, 50);
+    }
+
+        code { /* General content of the code */
+            display: inline-block;
+            margin-top: 1.5em;
+            padding: 0px;
+            border-radius: 5px;
+
+            font-family: 'Consolas', 'Courier New', monospace;
+            color: rgba(0, 230, 70, .2);
+            text-shadow: rgba(0, 230, 70, .2) 3px 3px 4px;
+
+            transition: .5s ease-in;
+        }
+
+            .code-focus { /* Main content of the code */
+                color: rgba(0, 230, 70, 1);
+                text-shadow: rgba(0, 230, 70, .4) 3px 3px 4px;
+            }
+
+                code:hover { /* Animation */
+                    color: rgba(0, 230, 70, 1);
+                    text-shadow: rgba(0, 230, 70, .4) 3px 3px 4px;
+                }
+

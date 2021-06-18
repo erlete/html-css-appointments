@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="main_theory_s.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        
+        <main>
+            <h1 class="main-title">Main HTML elements and relations between them</h1>
+            <section>
+                <h2 class="title">
+                    Document type: &lt;!DOCTYPE&gt;
+                </h2>
+                <p class="description">
+                    This element represents the document's type, provided so that the computer knows how to interpret** its contents.
+                </p>
+                <p class="elements">
+                    Since this is an HTML5 document, the proper way to note it is to write "html" next to the doctype.
+                </p>
+                <p class="ancestors">
+                    Technically, this element is not included in the layer-like structure of the document itself, since it marks its origin. Therefore, it does not have ancestors nor descendants.
+                </p>
+                <pre class="html-code">
+                    <code data-lang="html">
+<span class="code-focus">&lt;!DOCTYPE html&gt;</span>
+
+    ...[contents of the document]...
+                    </code>
+                </pre>
+                <section  class="second-level" class="attributes">
+                    <h3 class="subtitle">
+                        Attributes:
+                    </h3>
+                    <p>
+                        This element does not require any attributes, since their original use is now deprecated [+].
+                    </p>
+                </section>
+            </section>
+            
+            <section>
+                <h2 class="title">
+                    Root element: <b>&lt;html&gt;</b>
+                </h2>
+                <p class="description">
+                    This is the top-level element of any HTML document. Therefore, it is referred to as "root element".
+                </p>
+                <p class="elements">
+                    It can only contain two elements: a head, <b>&lt;head&gt;</b>, and a body, <b>&lt;body&gt;</b>.
+                </p>
+                <p class="ancestors">
+                    No ancestors are allowed for this element, since it is the main one.
+                </p>
+                <pre class="html-code">
+                    <code data-lang="html">
+&lt;!DOCTYPE html&gt;
+
+<span class="code-focus">&lt;html&gt;</span>
+
+    ...[contents of the document]...
+
+<span class="code-focus">&lt;/html&gt;</span>
+                    </code>
+                </pre>
+                <p class="annotation">
+                    Note: the &lt;html&gt; does not require indentation regarding** the <b>&lt;!DOCTYPE&gt;</b> one.
+                </p>
+                <section  class="second-level" class="attributes">
+                    <h3 class="subtitle">
+                        Attributes:
+                    </h3>
+                    <ul class="attribute-list">
+                        <li>
+                            <strong>"lang"</strong>: sets the language of the document.
+                        </li>
+                    </ul>
+                </section>
+                <section  class="second-level" class="descendants">
+                    <h3 class="subtitle">
+                        descendants elements:
+                    </h3>
+                    <ul class="descendants-list">
+                        <li>
+                            <strong>&lt;head&gt;</strong>: contains information about the document (<a href="/metadata.html">metadata</a>).
+                        </li>
+                        <li>
+                            <strong>&lt;body&gt;</strong>: defines the contents of the document.
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h2 class="title">
+                    Document's metadata: <b>&lt;head&gt;</b>
+                </h2>
+                <p class="description">
+                    This element contains machine-readable information about the document.
+                </p>
+                <p class="elements">
+                    Its descendants are elements related to the metadata of the document.
+                </p>
+                <p class="ancestors">
+                    Its only ancestor is the &lt;html&gt; element.
+                </p>
+                <pre class="html-code">
+                    <code data-lang="html">
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+    <span class="code-focus">&lt;head&gt;</span>
+    
+        ...[metadata elements]...
+        
+    <span class="code-focus">&lt;/head&gt;</span>
+
+&lt;/html&gt;
+                    </code>
+                </pre>
+                <section  class="second-level" class="descendants">
+                    <h3 class="subtitle">
+                        Descendant elements:
+                    </h3>
+                    <p>
+                        For structural reasons, this theory block has an independent site, which can be accessed by clicking <b><a href="metadata.html">here</a></b>.
+                    </p>
+                </section>
+            </section>
+            <section>
+                <h2 class="title">
+                    Sectioning root: <b>&lt;body&gt;</b>
+                </h2>
+                <p class="description">
+                    This element contains all the human-readable content of the HTML document (text, images...).
+                </p>
+                <p class="elements">
+                    It can contain all the lower-level element-types (according to their corresponding structural rules)
+                </p>
+                <p class="ancestors">
+                    Its only ancestor is the &lt;html&gt; element.
+                </p>
+                <pre class="html-code">
+                    <code data-lang="html">
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+    
+    &lt;head&gt;
+    
+        ...[metadata elements]...
+    
+    &lt;/head&gt;
+    
+    <span class="code-focus">&lt;body&gt;</span>
+    
+        ...[contents of the document]...
+        
+    <span class="code-focus">&lt;/body&gt;</span>
+
+&lt;/html&gt;
+                    </code>
+                </pre>
+                <section class="second-level" class="attributes">
+                    <h3 class="subtitle">
+                        Attributes:
+                    </h3>
+                    <ul class="attribute-list">
+                        <li>
+                            <strong>"id"</strong>: sets a unique reference for the element along the document.
+                        </li>
+                        <li>
+                            <strong>"class"</strong>: sets a group reference for the elements that contain this attribute under the same name.
+                        </li>
+                    </ul>
+                    <p class="annotation">
+                        Note: [*(some of.../all of....)] these attributes can also be applied to the &lt;body&gt; element.
+                    </p>
+                </section>
+                <section class="second-level">
+                    <h2 class="title">
+                        Content sectioning elements:
+                    </h2>
+                    <p class="description">
+                        Sectioning is mandatory in HTML formatting.
+                    </p>    
+                    <p class="description">
+                        If the content is not properly organized**, the document becomes harder to understand, and might become invalid in terms of normalisation.
+                    </p>
+                    <p class="description">
+                        Here is a list of the sectioning elements and their functionanity:
+                    </p>
+                    <section class="third-level">
+                        <h3 class="subtitle">
+                            <b>&lt;adress&gt;</b>
+                        </h3>
+                        <p class="description">
+                            This element indicates provides entities' contact information.
+                        </p>
+                        <p class="example">
+                            Example: contact info for a company (URL, e-mail, phone number...).
+                        </p>
+                        <section class="fourth-level" class="allowed-content">
+                            <h4 class="sub2title">
+                                Allowed content:
+                            </h4>
+                            <p>
+                                All of the Flow elements are allowed, apart from exceptions below:
+                            </p>
+                            <ul class="attribute-list">
+                                <li>
+                                    <b>Header</b> (&lt;header&gt;)
+                                </li>
+                                <li>
+                                    <b>Titles and title groups</b>  (&lt;hgroup&gt;, &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;)
+                                </li>
+                                <li>
+                                    <b>Self</b> (&lt;adress&gt;)
+                                </li>
+                                <li>
+                                    <b>Sectioning content</b>  (&lt;section&gt;, &lt;aside&gt;, &lt;nav&gt;)
+                                </li>
+                                <li>
+                                    <b>Footer</b> (&lt;footer&gt;)
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section class="third-level">
+                        <h3 class="subtitle">
+                            <b>&lt;article&gt;</b>
+                        </h3>
+                        <p class="description">
+                            This element represents an independent composition in a document. Their elements are interrelated and semantically coherent, therefore able to be distributed independently out of the context of said document.
+                        </p>
+                        <p class="example">
+                            Examples: daily forecast, comments in a blog...
+                        </p>
+                        <section class="fourth-level" class="Allowed-content">
+                            <h4 class="sub2title">
+                                Allowed content:
+                            </h4>
+                            <p>
+                                All of the Flow elements are allowed.
+                            </p>
+                        </section>
+                    </section>
+                    <section class="third-level">
+                        <h3 class="subtitle">
+                            <b>&lt;aside&gt;</b>
+                        </h3>
+                        <p class="description">
+                            This element represents a portion of a document whose content is indirectly related to the main content.
+                        </p>
+                        <p class="example">
+                            Example: side notes on newspapers, indirectly related to the article's content, yet not directly.
+                        </p>
+                        <section class="fourth-level" class="allowed-content">
+                            <h4 class="sub2title">
+                                Allowed content:
+                            </h4>
+                            <p>
+                                All of the Flow elements are allowed.
+                            </p>
+                        </section>
+                    </section>
+                    <section class="third-level">
+                        <h3 class="subtitle">
+                            <b>&lt;footer&gt;</b>
+                        </h3>
+                        <p class="description">
+                            This element contains typical "footer" data of the neares sectioning content or sectioning root element.
+                        </p>
+                        <p class="example">
+                            Examples: copyright, author credit, company name, links to related pages...
+                        </p>
+                        <section class="fourth-level" class="allowed-content">
+                            <h4 class="sub2title">
+                                Allowed content:
+                            </h4>
+                            <p>
+                                All of the Flow elements are allowed, apart from exceptions below:
+                            </p>
+                            <ul class="attribute-list">
+                                <li>
+                                    <b>Header</b> (&lt;header&gt;)
+                                </li>
+                                <li>
+                                    <b>Adress</b> (&lt;adress&gt;)
+                                </li>
+                                <li>
+                                    <b>Self</b> (&lt;footer&gt;)
+                                </li>
+                            </ul>
+                            <p class="annotation">
+                                Note: &lt;footer&gt; elements cannot be descendants of &lt;header&gt;, nor &lt;footer&gt; elements and vice versa**, due to obvious reasons.
+                            </p>
+                        </section>
+                    </section>
+                    <section class="third-level">
+                        <h3 class="subtitle">
+                            <b>&lt;header&gt;</b>
+                        </h3>
+                        <p class="description">
+                            This element represents introductory content, typically a group of introductory or navigational aids.
+                        </p>
+                        <p class="example">
+                            Examples: main logo, author name, search form...
+                        </p>
+                        <section class="fourth-level" class="allowed-content">
+                            <h4 class="sub2title">
+                                Allowed content:
+                            </h4>
+                            <p>
+                                All of the Flow elements are allowed, apart from exceptions below:
+                            </p>
+                            <ul class="attribute-list">
+                                <li>
+                                    <b>Self</b> (&lt;header&gt;)
+                                </li>
+                                <li>
+                                    <b>Adress</b> (&lt;adress&gt;)
+                                </li>
+                                <li>
+                                    <b>Footer</b> (&lt;footer&gt;)
+                                </li>
+                            </ul>
+                            <p class="annotation">
+                                Note: &lt;header&gt; elements cannot be descendants of &lt;header&gt;, nor &lt;footer&gt; elements and vice versa**, due to obvious reasons.
+                            </p>
+                        </section>
+                    </section>
+                    <section class="third-level">
+                        <h3 class="subtitle">
+                            <b>&lt;hgroup&gt;</b>
+                        </h3>
+                        <p class="description">
+                            This element represents a multi-level heading for a section of a document. It groups a set of section heading elements, explained above.
+                        </p>
+                        <p class="example">
+                            Examples: complex title-subtitle relations (chapters-subchapters**).
+                        </p>
+                        <section class="fourth-level" class="allowed-content">
+                            <h4 class="sub2title">
+                                Allowed content:
+                            </h4>
+                            <p>
+                                All of the Flow elements are allowed.
+                            </p>
+                            <p class="annotation">
+                                Note: since &lt;hgroup&gt; elements (those that group section heading elements in order to provide a tight title-subtitle relation between them) are now deprecated, they will not be included in this explanation.
+                            </p>
+                        </section>
+                    </section>
+                    <section class="third-level">
+                        <h3 class="subtitle">
+                            <b>&lt;main&gt;</b>
+                        </h3>
+                        <p class="description">
+                            This element represents the dominant content of the &lt;<body>&gt; of a document. It consists of content that is directly related to the central topic of a document, or the central functionality of an application.
+                        </p>
+                        <p class="example">
+                            Every HTML document itself is an example of the usage of this element. For instance**, the &lt;body&gt; of this webpage contains the explanations about HTML structure.
+                        </p>
+                        <section class="fourth-level" class="allowed-content">
+                            <h4 class="sub2title">
+                                Allowed content:
+                            </h4>
+                            <p>
+                                All of the Flow elements are allowed.
+                            </p>
+                            <p class="annotation">
+                                Note: only one &lt;body&gt; element is allowed per HTML document, for obvious reasons.
+                            </p>
+                        </section>
+                    </section>
+                    <section class="third-level">
+                        <h3 class="subtitle">
+                            <b>&lt;nav&gt;</b>
+                        </h3>
+                        <p class="description">
+                            This element represents a section of a page whose purpose is to provide internal (from the document itself) or external (outer documents) navigation links.
+                        </p>
+                        <p class="example">
+                            Examples: menus, tables of contents, indexes...
+                        </p>
+                        <section class="fourth-level" class="allowed-content">
+                            <h4 class="sub2title">
+                                Allowed content:
+                            </h4>
+                            <p>
+                                All of the Flow elements are allowed.
+                            </p>
+                        </section>
+                    </section>
+                    <section class="third-level">
+                        <h3 class="subtitle">
+                            <b>&lt;section&gt;</b>
+                        </h3>
+                        <p class="description">
+                            This element represents a standalone part of the document whose content is interrelated**.
+                        </p>
+                        <p class="example">
+                            The main content blocks of this webpage are sections, since they can be understood out of context (a title, explanation and properties are given for each element, so that the individual element is comprehensible).
+                        </p>
+                        <section class="fourth-level" class="allowed-content">
+                            <h4 class="sub2title">
+                                Allowed content:
+                            </h4>
+                            <p>
+                                All of the Flow elements are allowed.
+                            </p>
+                            <p class="annotation">
+                                Note: it is recommended to check <a href="missing_link">this brief table of differences</a> between different sectioning elements.
+                            </p>
+                            <p class="annotation">
+                                Note: &lt;section&gt; elements cannot be descendants of &lt;adress&gt; ones.
+                            </p>
+                        </section>
+                    </section>
+                    
+                </section>
+            </section>
+        </main>
+    </body>
+</html>
+
+<!--
+            <section>
+                <h2 class="title">
+                    Title: <b>&lt;element&gt;</b>
+                </h2>
+                <p class="description">
+                    Text
+                </p>
+                <p class="elements">
+                    Text
+                </p>
+                <p class="ancestors">
+                    Text
+                </p>
+                <section class="attributes">
+                    <h3 class="subtitle">Attributes:</h3>
+                    <ul class="attribute-list">Some useful attributes for this element are:
+                        <li>
+                            <strong>"attribute"</strong>: description
+                        </li>
+                    </ul>
+                </section>
+                <section class="descendants">
+                    <h3 class="subtitle">Descendant elements:</h3>
+                    <ul class="descendants-list">Some descendants elements can be:
+                        <li>
+                            <strong>&lt;descendants&gt;</strong>: description
+                        </li>
+                    </ul>
+                </section>
+            </section>
+-->

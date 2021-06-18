@@ -1,0 +1,223 @@
+/*
+
+NOTES:
+
+    1.CHECK HTML MISSING LINKS (missing_link)
+
+    2.CHECK HTML EDITS (EDIT)
+
+    3.CHECK RESEARCH [+] AND INVESTIGATION [*]
+
+    4.CHECK USAGE NOTES FOR EACH ELEMENT
+
+*/
+
+/* General text and background color formatting */
+
+html {
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(180deg, rgba(86, 126, 226, .5) 0%, 50%, rgba(24, 20, 166, .8));
+}
+
+body{
+    background-color: transparent;
+}
+
+p {
+    background-color: rgba(156, 0, 256, .05);
+}
+
+p.annotation {
+    background-color: rgba(56, 0, 256, .3);
+}
+
+section {
+    background-color: rgba(156, 0, 256, .05); /* This transparency setting allows the procedural color change for element's overlay */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgba(255, 255, 255, .8);
+    background-color: rgba(44, 20, 166, .6);
+}
+
+/* General box-shadow and border formatting */
+
+section, h1, h2, h3, h4, p, ul{
+    box-shadow: 0px 5px 5px black;
+    border: 0px solid black;
+    border-radius: 8px;
+}
+
+/* Color and border visibility polishing */
+
+    section,
+    p,
+    ul,
+    ol,
+    dl {
+        border: 1px solid rgba(150, 0, 256, .1);
+        border-top: 2px solid rgba(256, 256, 256, .15);
+    }
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* Root and root sectioning elements */
+
+html {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    margin: 0em; /* If not set to zero, the body gets slightly separated from the boders of the document */
+}
+
+section {
+    padding-bottom: .5em;
+    margin: 1.75em;
+}
+
+/* Content elements */
+
+    /* Titles */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: .25em 0em 0em;
+        padding: .5em;
+        font-weight: 700;
+        font-size: 1.75rem;
+    }
+
+        /* Various title settings adjustments */
+
+        .main-title {
+            margin: 0em;
+            padding: 2em;
+            border-radius: 20px;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 0px;
+            font-family: "Consolas", monospace;
+            font-size: 3em;
+            text-align: center;
+            text-shadow: 0px 8px 5px black;
+            text-rendering: geometricPrecision;
+            color: rgba(256, 256, 256, .9);
+            background-image: linear-gradient(90deg, rgba(186, 186, 256, .5) 0%, 50%, rgba(84, 60, 206, .6));
+            transition: 1s cubic-bezier(.46,1,.83,1.31);
+        }
+
+            .main-title:hover {
+                letter-spacing: .1em;
+                text-shadow: 8px 8px 5px rgba(0, 0, 0, .7);
+            }
+
+        h2 {
+            font-size: 1.55rem;
+        }
+
+        h3 {
+            font-size: 1.35rem;
+        }
+
+        h4 {
+            font-size: 1.20rem;
+        }
+
+        h5 {
+            font-size: 1.15rem;
+        }
+
+        h6 {
+            font-size: 1.10rem;
+        }
+
+    /* Paragraphs */
+
+    p {
+        margin: 1.75em;
+        padding: 0.5em;
+    }
+
+        p.annotation {
+            margin: 1.75em;
+            font-style: italic;
+        }
+
+    /* Links */
+
+    a {
+        color: inherit;
+        font-size: inherit;
+        text-decoration: inherit;
+    }
+
+    /* Bold and strong */
+
+    b,
+    strong {
+        font-weight: 1.75em;
+    }
+
+    /* Lists */
+
+    ul,
+    ol,
+    dl {
+        margin: 1.75em;
+        padding: 1em 2.5em;
+        background-color: rgba(250, 250, 255, .6);
+    }
+
+        .sublist-1{
+            margin: 0em;
+            padding: 1em 2em;
+            box-shadow: 0px 0px 0px;
+            background-color: transparent;
+        }
+
+    /* Coding blocks formatting */
+
+    pre { /* Code container */
+        margin: 1.75em;
+        border: 5px rgb(169, 169, 169) solid;
+        border-radius: 10px;
+        padding-top: 0em;
+        box-shadow: 0px 10px 0px rgb(109, 109, 109);
+        background-color: rgb(50, 50, 50);
+    }
+
+        code { /* General content of the code */
+            display: inline-block;
+            margin-top: 1.5em;
+            padding: 0px;
+            border-radius: 5px;
+
+            font-family: "Consolas", monospace;
+            color: rgba(0, 230, 70, .2);
+            text-shadow: rgba(0, 230, 70, .2) 3px 3px 4px;
+
+            transition: .5s ease-in;
+        }
+
+            .code-focus { /* Main content of the code */
+                color: rgba(0, 230, 70, 1);
+                text-shadow: rgba(0, 230, 70, .4) 3px 3px 4px;
+            }
+
+                code:hover { /* Animation */
+                    color: rgba(0, 230, 70, 1);
+                    text-shadow: rgba(0, 230, 70, .4) 3px 3px 4px;
+                }
+
