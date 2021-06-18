@@ -1,0 +1,39 @@
+# macOS-specific #
+
+# General
+.DS_Store
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Volumes' root files
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+VolumeIcon.icns
+
+# AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+# CodeKit #
+
+
+# General CodeKit files to ignore
+config.codekit
+config.codekit3
+/min
+*/codekit-config.json
+.codekit-cache
+
+# Original template extracted from https://www.toptal.com/developers/gitignore/api/macos,codekit
